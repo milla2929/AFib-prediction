@@ -1,8 +1,11 @@
 version: 1
 services:
-  - type: web
-    name: my-flask-app
-    env: python
-    buildCommand: "pip install -r requirements.txt"
-    startCommand: "python app.py"
-    autoDeploy: true
+  web:
+    type: web
+    name: my-flask-app  # Your service name
+    env: python         # Environment type
+    plan: free          # Plan type
+    buildCommand: pip install -r requirements.txt  # Command to run during build
+    startCommand: gunicorn app:app                  # Change 'app:app' to your entry point
+    environment:
+      python: "3.9"  # Specify a compatible Python version
