@@ -4,9 +4,12 @@ import numpy as np
 
 app = Flask(__name__)
 
-@app.route('/json')
-def json_response():
-    return {"message": "Hello, World!"}
+@app.route('/')
+def home():
+    return "Welcome to my Flask app!"
+
+if __name__ == '__main__':
+    app.run()
 
 # Load the model
 model = joblib.load('afib_model.pkl')  # Ensure this file is in the same directory
