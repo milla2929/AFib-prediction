@@ -1,1 +1,1 @@
-flaskscikit-learnjoblibnumpy
+flaskscikit-learnjoblibnumpygunicorn
