@@ -1,1 +1,1 @@
-flaskscikit-learnjoblibnumpygunicornwaitress
+flaskscikit-learnjoblibnumpygunicornwaitressflask_cors
