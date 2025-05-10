@@ -1,15 +1,14 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # Import CORS
 import joblib
 import numpy as np
 
-app = Flask(__name__)
+app = Flask(__name__)  # Use name here
+CORS(app)  # Enable CORS for all routes
 
 @app.route('/')
 def home():
     return "Welcome to my Flask app!"
-
-if __name__ == '__main__':
-    app.run()
 
 # Load the model
 model = joblib.load('afib_model.pkl')  # Ensure this file is in the same directory
